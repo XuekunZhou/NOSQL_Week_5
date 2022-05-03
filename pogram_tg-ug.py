@@ -8,7 +8,7 @@ import decimal
 app = Flask(__name__)
 
 #model opvragen die gedumpt is
-model = pickle.load(open('model_Q-TG.pkl', 'rb'))
+model = pickle.load(open('model_TG-UG.pkl', 'rb'))
 
 #default pagina van de applicatie
 @app.route('/')
@@ -32,7 +32,7 @@ def voorspellen_vochtigheid():
     hum = str(round(v[0],1))
 
     #Waarden wordt terugestuurd naar html pagina in variable antwoord
-    return render_template('q-tg.html', antwoord= 'Het voorspeld vochtigheid is: ' + hum + "%" )
+    return render_template('tg-ug.html', antwoord= 'Het voorspeld vochtigheid is: ' + hum + "%" )
 
 if __name__ == "__main__":
     app.run(debug=True)

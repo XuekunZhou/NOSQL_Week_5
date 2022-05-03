@@ -37,7 +37,7 @@ plt.xlabel("Globale straling in J/cm2")
 plt.ylabel("Etmaalgemiddelde temperatuur in deg C")
 plt.show()
 
-plt.scatter(X_test, Y_test,color='r')
+plt.scatter(X_test, Y_test, 12, color='r')
 plt.title("Linear regression test Q-TG")
 plt.plot(X_test, lr.predict(X_test))
 plt.xlabel("Globale straling in J/cm2")
